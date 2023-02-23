@@ -2,6 +2,7 @@
 {
     public class GalaxyCluster : AstronomicalObject
     {
+        public int GalaxyClusterID {get; set;} //Galaxy cluster ID
         public int numberOfGalaxies {get; set;}
         public float totalMass { get; set;} //in 10^9 Solar masses
         public float diameter { get; set;} //in megaparsecs

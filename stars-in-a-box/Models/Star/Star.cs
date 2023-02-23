@@ -2,6 +2,7 @@
 {
     public class Star : AstronomicalObject
     {
+        public int StarID {get; set;} //Star ID
         public float luminosity { get; set; } //Solar luminosity, 3.83*(10^26) watts
         public long diameter { get; set; } //Solar radius, 695700 km
         public int rotation { get; set; } //km/s

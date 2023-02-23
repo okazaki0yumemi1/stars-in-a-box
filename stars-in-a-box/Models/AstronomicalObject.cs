@@ -4,9 +4,7 @@ namespace stars_in_a_box.Models
 {
     public abstract class AstronomicalObject
     {
-        [Key]
-        Guid id { get; set; }
-        [Required]
+        //Guid id { get; set; }
         string name { get; set; }
 
     }
