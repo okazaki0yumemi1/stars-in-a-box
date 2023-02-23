@@ -1,7 +1,10 @@
-﻿namespace stars_in_a_box.Models.Star
+﻿using System.ComponentModel.DataAnnotations;
+namespace stars_in_a_box.Models.Star
+
 {
     public class Star : AstronomicalObject
     {
+        [Key]
         public int StarID {get; set;} //Star ID
         public float luminosity { get; set; } //Solar luminosity, 3.83*(10^26) watts
         public long diameter { get; set; } //Solar radius, 695700 km

@@ -12,8 +12,8 @@ using stars_in_a_box;
 namespace stars_in_a_box.Migrations
 {
     [DbContext(typeof(DatabaseConnection))]
-    [Migration("20230223125610_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20230223175230_starBox")]
+    partial class starBox
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

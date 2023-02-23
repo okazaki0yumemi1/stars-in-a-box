@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace stars_in_a_box.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class starBox : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
