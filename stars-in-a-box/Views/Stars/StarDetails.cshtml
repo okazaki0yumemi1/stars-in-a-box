@@ -1,0 +1,35 @@
+@model stars_in_a_box.Models.Star.Star
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Star</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StarID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.luminosity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.diameter)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.mass)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.rotation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.surfaceTemperature)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.StarID">Edit</a> |
+</div>
