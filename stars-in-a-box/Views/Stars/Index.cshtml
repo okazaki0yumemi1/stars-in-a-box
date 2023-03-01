@@ -12,22 +12,22 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.name)
+                Star name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.luminosity)
+                Luminocity
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.diameter)
+                Star diameter
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.mass)
+                Mass
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.rotation)
+                Rotation velocity (at equator)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.surfaceTemperature)
+                Surface temperature
             </th>
             <th></th>
         </tr>
@@ -39,19 +39,19 @@
                 @Html.DisplayFor(modelItem => item.name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.luminosity)
+                @Html.DisplayFor(modelItem => item.luminosity) in solar luminosities
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.diameter)
+                @Html.DisplayFor(modelItem => item.diameter) in soalr radii
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.mass)
+                @Html.DisplayFor(modelItem => item.mass) in solar masses
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.rotation)
+                @Html.DisplayFor(modelItem => item.rotation) km/s
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.surfaceTemperature)
+                @Html.DisplayFor(modelItem => item.surfaceTemperature) K
             </td>
         </tr>
 }
