@@ -16,7 +16,7 @@ public class StarsController : Controller
     {
         return _connection.Stars != null ?
         View(await _connection.Stars.ToListAsync()) :
-        Problem("Entity set 'stars-in-a-box.Stars'  is null.");
+        Problem("Entity set 'stars-in-a-box.Stars' is null.");
     }
     // 
     // GET: /Stars/Details/id
