@@ -5,3 +5,64 @@
 <h2>Stars list</h2>
 
 <p>Hello from our View Template!</p>
+
+@model IEnumerable<stars_in_a_box.Models.Star.Star>
+
+@{
+    ViewData["Title"] = "Stars";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.luminosity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.diameter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mass)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rotation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.surfaceTemperature)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.luminosity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.diameter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rotation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.surfaceTemperature)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

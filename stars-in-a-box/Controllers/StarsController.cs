@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
 namespace stars_in_a_box;
 public class StarsController : Controller
 {
@@ -10,13 +12,15 @@ public class StarsController : Controller
     }
     // 
     // GET: /Stars/
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        return View();
+        return _connection.Stars != null ?
+        View(await _connection.Stars.ToListAsync()) :
+        Problem("Entity set 'stars-in-a-box.Stars'  is null.");
     }
     // 
     // GET: /Stars/Details/id
-    public async Task<IActionResult> Details(int id)
+    public async Task<IActionResult> Details(int? id)
     {
         var star = await _connection.Stars.FindAsync(id);
         if (star == null) 
